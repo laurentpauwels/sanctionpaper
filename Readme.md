@@ -34,7 +34,7 @@ The runtime of the master file `evaluateTradeSanction.m` on 10 Apple M1 CPU core
 ## Data
 
 ### Access
-The raw and processed data can be downloaded from the folder `sanctionpaper/matlab/data` available from this [Google Drive folder](https://drive.google.com/drive/folders/1m9ka-S38a01ptVbp-jJPMy9uXinoR2kB?usp=sharing). If you clone this git repository, make sure to place the downloaded `data` folder from Google Drive within the `matlab` folder of this repository (see [Folder Structure](#folder-structure) for details). The data folder contains [Raw](#raw) and [Processed](#processed) data folders.
+The raw and processed data can be downloaded from the folder `sanctionpaper/matlab/data` available from this [Google Drive folder](https://drive.google.com/drive/folders/1m9ka-S38a01ptVbp-jJPMy9uXinoR2kB?usp=sharing). If you clone this git repository, make sure to place the downloaded `data` folder from Google Drive within the `matlab` folder of this repository (see [Folder Structure](#folder-structure) for details). The data folder contains `Raw` and `Processed` data folders.
 
 For convenience and to save time, the simulation output (*simulation_output.txt*) required to build the scatter plots in Figure 1 with STATA is available in the [Google Drive folder](https://drive.google.com/drive/folders/1m9ka-S38a01ptVbp-jJPMy9uXinoR2kB?usp=sharing) `sanctionpaper/matlab/output`. Place the file in the `matlab/output/` folder of this repository if you do not want to run the simulations as detailed in [Instructions](#instructions).
 
