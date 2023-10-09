@@ -90,7 +90,7 @@ NOTE: `matlab/scripts/convertMatlabStruc2data.m` converts *MATLAB v7.3* format (
 
  	- The second scenario (`scenarioSanctionEur.m`) simulates a German Chemical shock and looks at the German approximate response and the Russian refined petroleum approximate response (Figures B.3 and B.4). 
 
-3. `Russia_Simulations.ipynb`: The graphs in Figure 1 are constructed with STATA in this Jupyter Notebook  located in the `/stata/` folder. The Jupyter Notebook outputs all the graphs in `/stata/output/plots`. The `scenarioSanctionRus.m` produces a simulation output file *simulation_output.txt* in `matlab/output`.  The *simulation_output.txt* is available in the [Google Drive folder](https://drive.google.com/drive/folders/1m9ka-S38a01ptVbp-jJPMy9uXinoR2kB?usp=sharing) `sanctionpaper/matlab/output/`. 
+3. `Russia_Simulations.ipynb`: The graphs in Figure 1 are constructed with STATA in this Jupyter Notebook located in the `/stata/` folder. The Jupyter Notebook outputs all the graphs in `/stata/output/plots`. The `scenarioSanctionRus.m` produces a simulation output file *simulation_output.txt* in `matlab/output`.  The *simulation_output.txt* is available in the [Google Drive folder](https://drive.google.com/drive/folders/1m9ka-S38a01ptVbp-jJPMy9uXinoR2kB?usp=sharing) `sanctionpaper/matlab/output/`.  The code in the Jupyter notebook is also available as a `.do` file in `stata/Russia_Simulations.do`.
 
 ## Folder Structure
 
@@ -102,7 +102,7 @@ NOTE: `matlab/scripts/convertMatlabStruc2data.m` converts *MATLAB v7.3* format (
 
 	NOTE: add the downloaded `data` folder to the `matlab` folder structure.
 
-- `stata`: main STATA folder with a Jupyter Notebook that produces all the scatter plots.
+- `stata`: main STATA folder with a Jupyter Notebook that produces all the scatter plots (also available as a `.do` file).
 	- `output/plots`: stores all the scatter plots.
 	
 - `python`: main executable `convertXlsb2Csv.py` relies on `matlab/data/processed` folder to convert the MATLAB data. See [Data](#data) Sources for details.  
