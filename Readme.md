@@ -115,7 +115,7 @@ NOTE: `matlab/scripts/convertMatlabStruc2data.m` converts *MATLAB v7.3* format (
 - `approxEffectSanction.m` approximates the effect of trade sanctions.
 - `getSubstituteMarket.m` produces a list of historical substitute markets. 
 - `graphSubstituteMarket.m` plots the historical substitute markets.
-- `concordanceAlpha.m` produces $ \alpha_r = \frac{\textrm{Labor Compensation}}{\textrm{Value Added}} $
+- `concordanceAlpha.m` produces $ \alpha_r $ the fraction of Labor Compensation over Value Added.
 in national currency, which is required to approximate the effect of sanctions. It matches the ICIO21 and WIOT16 industry lists.
 - `getSimulationOutput.m` simulates the Huo et al. (2023) model to get a response of production to trade shocks so that the simulated response can be evaluated against the approximation.
 - `scenarioSanctionRus.m` produces 3D Figures B.1 and B.2. 
