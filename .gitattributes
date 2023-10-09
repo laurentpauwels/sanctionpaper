@@ -1,0 +1,5 @@
+# For text count
+ *.ipynb  text
+
+# To ignore it use below
+ *.ipynb linguist-documentation
