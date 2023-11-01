@@ -18,7 +18,7 @@ The software and programming provided (.m, .mat, .py, and .ipynb files) is licen
 ### Requirements
 The software used for replications are:
  - MATLAB Version: 9.14.0.2206163 (R2023a)
- - STATA 17
+ - STATA 17 MP (8-cores)
  - Python 3.11.5 
 	- os
 	- zipfile
@@ -54,10 +54,10 @@ In the [Google Drive](https://drive.google.com/drive/folders/1m9ka-S38a01ptVbp-j
 
 IMPORTANT NOTE: WIOD provides the data in XLSB format. The XLSB WIOD data is in the `WIOT_in_EXCEL.zip` located in the [Google Drive folder](https://drive.google.com/drive/folders/1m9ka-S38a01ptVbp-jJPMy9uXinoR2kB?usp=sharing) `matlab/data/raw/WIOD/`. Python is used to convert XLSB into CSV files. See `python/convertXlsb2Csv.py` code for unzipping and conversion to CSV. The converted CSV files are provided for convenience.
 
-### Cleaning
+### Processing
+
 All the data parsing and preprocessing are done with MATLAB, see `matlab/processData.m`. The script parses and pre-processes the ICIO21, SEA16, and WIOT16 data using three specific scripts in `matlab/scripts/`: `processICIO21.m`, `processSEA16.m`, and `processWIOT16.m`. Processing the ICIO21 and WIOT16 data requires two functions (in `/matlab/functions`): `idExtract.m` and  `netInventCorrect.m`. 
 
-### Processing
 The processed ICIO21, SEA16, and WIOT16 data are stored in the Google Drive in the `/matlab/data/processed` folder into three separate `.mat` structure files:
 
 - `icio21_strc.mat` contains:
@@ -105,7 +105,7 @@ NOTE: `matlab/scripts/convertMatlabStruc2data.m` converts *MATLAB v7.3* format (
 - `stata`: main STATA folder with a Jupyter Notebook that produces all the scatter plots (also available as a `.do` file).
 	- `output/plots`: stores all the scatter plots.
 	
-- `python`: main executable `convertXlsb2Csv.py` relies on `matlab/data/processed` folder to convert the MATLAB data. See [Data](#data) Sources for details.  
+- `python`: main executable `convertXlsb2Csv.py` relies on `matlab/data/raw` folder to convert the MATLAB data. See [Data](#data) Sources for details.  
 
 
 ## Scripts and Functions
