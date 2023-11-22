@@ -1,5 +1,7 @@
 # Replication Code for An Empirical Approximation of the Effects of Trade Sanctions with an Application to Russia
 
+[![DOI](https://zenodo.org/badge/702487451.svg)](https://zenodo.org/doi/10.5281/zenodo.10184323)
+
 
 ## Introduction
 The code in this repository replicates all tables and figures in Imbs and Pauwels (2023, Economic Policy). 
@@ -166,7 +168,7 @@ matlab/output/simulation_output.txt	 | Dataset for Figure 1 	| matlab/evaluateAp
 stata/output/plots 	 			  	 | Figure 1	    			| stata/Russia_Simulations.ipynb
 matlab/output/plots				 	 | Figures 2,3,4 			| matlab/evaluateTradeSanction.m
 matlab/output/plots/scenario1 	 	 | Figures B.1 & B.2 		| matlab/evaluateApproximation.m
-matlab/output/plots/scenario2 	 	 | Figures B.3 & B.4| matlab/evaluateApproximation.m
+matlab/output/plots/scenario2 	 	 | Figures B.3 & B.4		| matlab/evaluateApproximation.m
 
 NOTE: *simulation_output.txt* is not included in the repository as it is over 100MB. You can download it from the [dataset](https://doi.org/10.5281/zenodo.10122045) in the  `sanctionpaper_v1/matlab/output` folder.
 
@@ -178,6 +180,8 @@ Antràs, P. and Chor, D. (2018). On the Measurement of Upstreamness and Downstre
 Huo, Z., Levchenko, A. A., and Pandalai-Nayar, N. (2023). International Comovement in the Global Production Network. Working Paper 25978, National Bureau of Economic Research.
 
 Imbs, J., and Pauwels, L. (2023). An Empirical Approximation of the Effects of Trade Sanctions with an Application to Russia, Economic Policy. https://doi.org/10.1093/epolic/eiad027
+
+Imbs, J., and Pauwels, L. (2023). Replication code for An Empirical Approximation of the Effects of Trade Sanctions with an Application to Russia (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.10184324
 
 Imbs, J., and Pauwels, L. (2023). Replication data for An Empirical Approximation of the Effects of Trade Sanctions with an Application to Russia [Data set]. Zenodo. https://doi.org/10.5281/zenodo.10122045
 

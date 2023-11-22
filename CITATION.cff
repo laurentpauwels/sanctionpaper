@@ -1,0 +1,14 @@
+cff-version: 1.1.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: Jean
+  given-names: Imbs
+  orcid: https://orcid.org/0000-0001-9322-1918
+- family-names: Laurent
+  given-names: Pauwels
+  orcid: https://orcid.org/0000-0002-7144-0340
+title: Replication code for An Empirical Approximation of the Effects of Trade Sanctions with an Application to Russia
+version: v1.0.0
+doi: 10.5281/zenodo.10184324
+date-released: 2023-11-22
+url: https//doi.org/10.5281/zenodo.10184324
