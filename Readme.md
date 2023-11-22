@@ -2,7 +2,7 @@
 
 
 ## Introduction
-The code in this repository replicate all tables and figures in Imbs and Pauwels (2023, Economic Policy). 
+The code in this repository replicates all tables and figures in Imbs and Pauwels (2023, Economic Policy). 
 
 If you are only interested in approximating the costs of trade sanctions for sets of countries and industries, please visit the Sanction Impact Dashboard at https://exposure.trade. The Python (and MATLAB) core code for the dashboard is available from the https://github.com/laurentpauwels/sanctiondashboard repository.
 
