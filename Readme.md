@@ -1,4 +1,4 @@
-# Replication Code for 'An Empirical Approximation of the Effects of Trade Sanctions with an Application to Russia'
+# Replication Code for An Empirical Approximation of the Effects of Trade Sanctions with an Application to Russia
 
 
 ## Introduction
@@ -9,9 +9,11 @@ If you are only interested in approximating the costs of trade sanctions for set
 ### Citation
 If you use any of these materials, please cite:
 
-	Imbs, Jean and Pauwels, Laurent, 2023, "An Empirical Approximation of the Effects of Trade Sanctions with an Application to Russia," Economic Policy, Forthcoming.
+```
+Imbs, Jean and Pauwels, Laurent, 2023, "An Empirical Approximation of the Effects of Trade Sanctions with an Application to Russia," Economic Policy. doi: 10.1093/epolic/eiad027
+```
 
-### Licence
+## Licence
 The software and programming provided (.m, .mat, .py, and .ipynb files) is licensed under [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html). Please check the license terms of the original data providers listed in [Data](#data).
 
 ## Software 
@@ -34,9 +36,20 @@ The runtime of the master file `evaluateTradeSanction.m` on 10 Apple M1 CPU core
 ## Data
 
 ### Access
-The raw and processed data can be downloaded from the folder `sanctionpaper/matlab/data` available from this [Google Drive folder](https://drive.google.com/drive/folders/1m9ka-S38a01ptVbp-jJPMy9uXinoR2kB?usp=sharing). If you clone this git repository, make sure to place the downloaded `data` folder from Google Drive within the `matlab` folder of this repository (see [Folder Structure](#folder-structure) for details). The data folder contains `Raw` and `Processed` data folders.
+The raw and processed data can be downloaded from Zenodo here:
 
-For convenience and to save time, the simulation output (*simulation_output.txt*) required to build the scatter plots in Figure 1 with STATA is available in the [Google Drive folder](https://drive.google.com/drive/folders/1m9ka-S38a01ptVbp-jJPMy9uXinoR2kB?usp=sharing) `sanctionpaper/matlab/output`. Place the file in the `matlab/output/` folder of this repository if you do not want to run the simulations as detailed in [Instructions](#instructions).
+ [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10122045.svg)](https://doi.org/10.5281/zenodo.10122045) 
+
+The full reference is
+```
+Imbs, J., and Pauwels, L. (2023). Replication data for An Empirical Approximation of the Effects of Trade Sanctions with an Application to Russia [Data set]. Zenodo. https://doi.org/10.5281/zenodo.10122045
+```
+
+Clone this git repository, then download the [dataset](https://doi.org/10.5281/zenodo.10122045), extract the following folder/files, and 
+ 
+ 1. Place the downloaded `data` folder (from `sanctionpaperdata_v1/matlab/`) within the `matlab` folder of this repository (see [Folder Structure](#folder-structure) for details). The data folder contains `raw` and `processed` data folders.
+
+2. Place `simulation_output.txt` file (from `sanctionpaperdata_v1/matlab/output/`) in the `matlab/output` folder of this repository if you do not want to run the simulations as detailed in [Instructions](#instructions). For convenience and to save time, the simulation output required to build the scatter plots in Figure 1 with STATA is available in the `sanctionpaperdata_v1/matlab/output/output` folder of the [dataset](https://doi.org/10.5281/zenodo.10122045). 
 
 ### Sources
 The raw data come from these sources:
@@ -50,13 +63,13 @@ The raw data come from these sources:
 - WIOD World Input-Output Tables (WIOT) data November 2016 (downloaded on 23 June 2023)
 	- Source: <https://www.rug.nl/ggdc/valuechain/wiod/wiod-2016-release>
 
-In the [Google Drive](https://drive.google.com/drive/folders/1m9ka-S38a01ptVbp-jJPMy9uXinoR2kB?usp=sharing), the `matlab/data/raw` folder contains an `ICIO21` folder with the ICIO21 data, and a `WIOD` folder with the SEA16 data (in `data/raw/WIOD/SEA16`) and the WIOT16 data in CSV format (in `data/raw/WIOD/WIOT16`).
+In the [dataset](https://doi.org/10.5281/zenodo.10122045), the `matlab/data/raw` folder contains an `ICIO21` folder with the ICIO21 data, and a `WIOD` folder with the SEA16 data (in `data/raw/WIOD/SEA16`) and the WIOT16 data in CSV format (in `data/raw/WIOD/WIOT16`).
 
-IMPORTANT NOTE: WIOD provides the data in XLSB format. The XLSB WIOD data is in the `WIOT_in_EXCEL.zip` located in the [Google Drive folder](https://drive.google.com/drive/folders/1m9ka-S38a01ptVbp-jJPMy9uXinoR2kB?usp=sharing) `matlab/data/raw/WIOD/`. Python is used to convert XLSB into CSV files. See `python/convertXlsb2Csv.py` code for unzipping and conversion to CSV. The converted CSV files are provided for convenience.
+IMPORTANT NOTE: WIOD provides the data in XLSB format. The XLSB WIOD data is in the `WIOT_in_EXCEL.zip` located in the [dataset](https://doi.org/10.5281/zenodo.10122045) `matlab/data/raw/WIOD/`. Python is used to convert XLSB into CSV files. See `python/convertXlsb2Csv.py` code for unzipping and conversion to CSV. The converted CSV files are provided for convenience.
 
 ### Processing
 
-All the data parsing and preprocessing are done with MATLAB, see `matlab/processData.m`. The script parses and pre-processes the ICIO21, SEA16, and WIOT16 data using three specific scripts in `matlab/scripts/`: `processICIO21.m`, `processSEA16.m`, and `processWIOT16.m`. Processing the ICIO21 and WIOT16 data requires two functions (in `/matlab/functions`): `idExtract.m` and  `netInventCorrect.m`. 
+All the data parsing and preprocessing are done with MATLAB, see `matlab/processData.m`. The script parses and pre-processes the ICIO21, SEA16, and WIOT16 data using three specific scripts in `matlab/scripts/` : `processICIO21.m`, `processSEA16.m`, and `processWIOT16.m`. Processing the ICIO21 and WIOT16 data requires two functions (in `/matlab/functions`): `idExtract.m` and  `netInventCorrect.m`. 
 
 The processed ICIO21, SEA16, and WIOT16 data are stored in the Google Drive in the `/matlab/data/processed` folder into three separate `.mat` structure files:
 
@@ -90,7 +103,7 @@ NOTE: `matlab/scripts/convertMatlabStruc2data.m` converts *MATLAB v7.3* format (
 
  	- The second scenario (`scenarioSanctionEur.m`) simulates a German Chemical shock and looks at the German approximate response and the Russian refined petroleum approximate response (Figures B.3 and B.4). 
 
-3. `Russia_Simulations.ipynb`: The graphs in Figure 1 are constructed with STATA in this Jupyter Notebook located in the `/stata/` folder. The Jupyter Notebook outputs all the graphs in `/stata/output/plots`. The `scenarioSanctionRus.m` produces a simulation output file *simulation_output.txt* in `matlab/output`.  The *simulation_output.txt* is available in the [Google Drive folder](https://drive.google.com/drive/folders/1m9ka-S38a01ptVbp-jJPMy9uXinoR2kB?usp=sharing) `sanctionpaper/matlab/output/`.  The code in the Jupyter notebook is also available as a `.do` file in `stata/Russia_Simulations.do`.
+3. `Russia_Simulations.ipynb`: The graphs in Figure 1 are constructed with STATA in this Jupyter Notebook located in the `/stata/` folder. The Jupyter Notebook outputs all the graphs in `/stata/output/plots`. The `scenarioSanctionRus.m` produces a simulation output file *simulation_output.txt* in `matlab/output`.  The *simulation_output.txt* is available in the [dataset](https://doi.org/10.5281/zenodo.10122045) `output` folder.  The code in the Jupyter notebook is also available as a `.do` file in `stata/Russia_Simulations.do`.
 
 ## Folder Structure
 
@@ -155,13 +168,18 @@ matlab/output/plots				 	 | Figures 2,3,4 			| matlab/evaluateTradeSanction.m
 matlab/output/plots/scenario1 	 	 | Figures B.1 & B.2 		| matlab/evaluateApproximation.m
 matlab/output/plots/scenario2 	 	 | Figures B.3 & B.4| matlab/evaluateApproximation.m
 
-NOTE: *simulation_output.txt* is not included in the repository as it is over 100MB. You can download it from the [Google Drive folder](https://drive.google.com/drive/folders/1m9ka-S38a01ptVbp-jJPMy9uXinoR2kB?usp=sharing) `sanctions/matlab/output`
+NOTE: *simulation_output.txt* is not included in the repository as it is over 100MB. You can download it from the [dataset](https://doi.org/10.5281/zenodo.10122045) in the  `sanctionpaper_v1/matlab/output` folder.
+
 ## References
 Antràs, P. and Chor, D. (2013). Organizing the Global Value Chain. Econometrica, 81(6):2127– 2204.
 
 Antràs, P. and Chor, D. (2018). On the Measurement of Upstreamness and Downstreamness in Global Value Chains. In Ing, L. Y. and Yu, M., editors, World Trade Evolution: Growth, Productivity and Employment, chapter 5. Routledge.
 
 Huo, Z., Levchenko, A. A., and Pandalai-Nayar, N. (2023). International Comovement in the Global Production Network. Working Paper 25978, National Bureau of Economic Research.
+
+Imbs, J., and Pauwels, L. (2023). An Empirical Approximation of the Effects of Trade Sanctions with an Application to Russia, Economic Policy. https://doi.org/10.1093/epolic/eiad027
+
+Imbs, J., and Pauwels, L. (2023). Replication data for An Empirical Approximation of the Effects of Trade Sanctions with an Application to Russia [Data set]. Zenodo. https://doi.org/10.5281/zenodo.10122045
 
 OECD (2021), OECD Inter-Country Input-Output Database, http://oe.cd/icio.
 
