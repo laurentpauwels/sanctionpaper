@@ -1,8 +1,8 @@
 %% DESCRIPTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% evaluateApproximation is the main script that produces 3 dimensions
+% validateApproximation is the main script that produces 3 dimensions
 % Figures 2, 3, 7 and 8 in the Imbs and Pauwels (2023, EconPolicy).
 % The Figures are produced with several scripts and functions.
-% evaluateApproximation.m requires these scripts: 
+% validateApproximation.m requires these scripts: 
 % - scenarioSanctionRus.m
 % - scenarioSanctionEur.m
 % - concoranceAlpha.m 

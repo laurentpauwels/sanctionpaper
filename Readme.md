@@ -1,6 +1,7 @@
 # Replication Code for An Empirical Approximation of the Effects of Trade Sanctions with an Application to Russia
 
-[![DOI](https://zenodo.org/badge/702487451.svg)](https://zenodo.org/doi/10.5281/zenodo.10184323)
+[![Article DOI](https://img.shields.io/badge/Article-10.1093%2Fepolic%2Feiad027-blue)](https://doi.org/10.1093/epolic/eiad027)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10184323.svg)](https://doi.org/10.5281/zenodo.10184323)
 
 
 ## Introduction
@@ -33,7 +34,7 @@ The software used for replications are:
 MATLAB is used to produce Figures 2 - 6 and Tables 1 - 8. STATA is used for Figure 1 (scatter plots). Python is only used to convert XLSB format into CSV. It is not required to replicate any result of the paper. See [Data](#data) for more details. 
 
 ### Runtime
-The runtime of the master file `evaluateTradeSanction.m` on 10 Apple M1 CPU cores is approximately 36 minutes. `getSubstituteMarket.m` takes up most of the computing time (around 35 minutes). The runtime of `evaluateApproximation.m` on 10 Apple M1 CPU cores is approximately 84 minutes. Most of the computing time is taken by the simulation script `getSimulationOutput.m` which takes around 42 minutes to run.
+The runtime of the master file `evaluateTradeSanction.m` on 10 Apple M1 CPU cores is approximately 36 minutes. `getSubstituteMarket.m` takes up most of the computing time (around 35 minutes). The runtime of `validateApproximation.m` on 10 Apple M1 CPU cores is approximately 84 minutes. Most of the computing time is taken by the simulation script `getSimulationOutput.m` which takes around 42 minutes to run.
 
 ## Data
 
@@ -91,7 +92,7 @@ NOTE: `matlab/scripts/convertMatlabStruc2data.m` converts *MATLAB v7.3* format (
 
 ## Instructions
  
- There are two main executable MATLAB 'master' codes, `evaluateTradeSanction.m` and `evaluateApproximation.m`, and one STATA Jupyter Notebook `Russia_Simulations.ipynb`. 
+There are two main executable MATLAB 'master' codes, `evaluateTradeSanction.m` and `validateApproximation.m`, and one STATA Jupyter Notebook `Russia_Simulations.ipynb`. 
 
 1. `evaluateTradeSanction.m` : Run this script to produce Tables 1 - 8 and Figures 2 - 4. It relies on 5 separate scripts (stored in the `scripts` folder) and several functions (stored in the `functions` folder). More details are available in [Scripts and Functions](#scripts-and-functions). Running the code will compare high order measure with direct measure of trade (`compareDirectTrade.m`), approximate the effect of sanctions (`approxEffectSanction.m`), produce a list of historical substitute markets (`getSubstituteMarket.m`) based on the downstream measure HOT and the upstream measure SHOT, and plot the historical substitute markets (`graphSubstituteMarket.m`) according to HOT and SHOT. The focus of the code is on the European Union (+ GBR) and the Russian Federation. The data required are: `sea16_strc.mat` and `icio21_strc.mat`.
 
@@ -99,7 +100,7 @@ NOTE: `matlab/scripts/convertMatlabStruc2data.m` converts *MATLAB v7.3* format (
 	- NOTE 2: The script `concordanceAlpha.m` produces $\alpha_r$ which is required to approximate the cost of trade sanctions (`approxEffectSanction.m`).
 	- NOTE 3: Make sure to download and place the downloaded `data` within the `matlab` folder, or change the file paths in the code accordingly.
 
-2. `evaluateApproximation.m`: Run this script to produce the simulation results to produce 3D Figures B.1 - B.4 and the simulation output for Figure 1. It relies on 3 separate scripts (stored in the `scripts` folder) and several functions (stored in the `functions` folder). There are two 3D graphs showing the correlation (from regression) of simulated and approximated responses of value added ($\beta$ coefficient and $R^2$), and two 3D graphs showing the downstream approximate response of real value added (HOT) and upstream (SHOT) approximate response of real value added. The simulations are run inside each scenario script with `getSimulationOutput.m`.
+2. `validateApproximation.m`: Run this script to produce the simulation results to produce 3D Figures B.1 - B.4 and the simulation output for Figure 1. It relies on 3 separate scripts (stored in the `scripts` folder) and several functions (stored in the `functions` folder). There are two 3D graphs showing the correlation (from regression) of simulated and approximated responses of value added ($\beta$ coefficient and $R^2$), and two 3D graphs showing the downstream approximate response of real value added (HOT) and upstream (SHOT) approximate response of real value added. The simulations are run inside each scenario script with `getSimulationOutput.m`.
 	
 	- The first scenario  (`scenarioSanctionRus.m`) simulate a refined petroleum shock from Russia and looks at the Russian response to the shock as well as the response from the Chemical industry in Germany (Figures B.1 and B.2). 
 
@@ -164,11 +165,11 @@ In summary the Tables and Figures are
  File                     		 	 | Exhibit                  | Script
 -------------------------------------|--------------------------|--------------------------------------
 matlab/output/result_tables.xlsx     | Tables 1 - 8          	| matlab/evaluateTradeSanction.m
-matlab/output/simulation_output.txt	 | Dataset for Figure 1 	| matlab/evaluateApproximation.m
+matlab/output/simulation_output.txt	 | Dataset for Figure 1 	| matlab/validateApproximation.m
 stata/output/plots 	 			  	 | Figure 1	    			| stata/Russia_Simulations.ipynb
 matlab/output/plots				 	 | Figures 2,3,4 			| matlab/evaluateTradeSanction.m
-matlab/output/plots/scenario1 	 	 | Figures B.1 & B.2 		| matlab/evaluateApproximation.m
-matlab/output/plots/scenario2 	 	 | Figures B.3 & B.4		| matlab/evaluateApproximation.m
+matlab/output/plots/scenario1 	 	 | Figures B.1 & B.2 		| matlab/validateApproximation.m
+matlab/output/plots/scenario2 	 	 | Figures B.3 & B.4		| matlab/validateApproximation.m
 
 NOTE: *simulation_output.txt* is not included in the repository as it is over 100MB. You can download it from the [dataset](https://doi.org/10.5281/zenodo.10122045) in the  `sanctionpaper_v1/matlab/output` folder.
 

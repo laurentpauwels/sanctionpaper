@@ -1,14 +1,32 @@
-cff-version: 1.1.0
-message: "If you use this software, please cite it as below."
+cff-version: 1.2.0
+message: "If you use this software, please cite both the article (preferred citation) and this repository."
+title: "Replication code for An Empirical Approximation of the Effects of Trade Sanctions with an Application to Russia"
+type: software
 authors:
-- family-names: Imbs
-  given-names: Jean
-  orcid: https://orcid.org/0000-0001-9322-1918
-- family-names: Pauwels
-  given-names: Laurent
-  orcid: https://orcid.org/0000-0002-7144-0340
-title: Replication code for An Empirical Approximation of the Effects of Trade Sanctions with an Application to Russia
-version: v1.0.0
-doi: 10.5281/zenodo.10184324
+  - family-names: Imbs
+    given-names: Jean
+    orcid: https://orcid.org/0000-0001-9322-1918
+  - family-names: Pauwels
+    given-names: Laurent
+    orcid: https://orcid.org/0000-0002-7144-0340
+version: 1.0.0
 date-released: 2023-11-22
-url: https//doi.org/10.5281/zenodo.10184324
+license: GPL-3.0-only
+repository-code: "https://github.com/laurentpauwels/sanctionpaper"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.10184323
+    description: "Concept DOI for the code archive (all versions)"
+doi: 10.5281/zenodo.10184323
+url: "https://doi.org/10.5281/zenodo.10184323"
+preferred-citation:
+  type: article
+  title: "An Empirical Approximation of the Effects of Trade Sanctions with an Application to Russia"
+  authors:
+    - family-names: Imbs
+      given-names: Jean
+    - family-names: Pauwels
+      given-names: Laurent
+  journal: "Economic Policy"
+  year: 2023
+  doi: 10.1093/epolic/eiad027
