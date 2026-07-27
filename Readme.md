@@ -1,7 +1,7 @@
 # Replication Code for An Empirical Approximation of the Effects of Trade Sanctions with an Application to Russia
 
 [![Article DOI](https://img.shields.io/badge/Article-10.1093%2Fepolic%2Feiad027-blue)](https://doi.org/10.1093/epolic/eiad027)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10184324.svg)](https://doi.org/10.5281/zenodo.10184324)
+[![Code DOI](https://img.shields.io/badge/Code_DOI-10.5281%2Fzenodo.10184324-blue)](https://doi.org/10.5281/zenodo.10184324)
 
 
 ## Introduction
@@ -41,7 +41,7 @@ The runtime of the master file `evaluateTradeSanction.m` on 10 Apple M1 CPU core
 ### Access
 The raw and processed data can be downloaded from Zenodo here:
 
- [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10122045.svg)](https://doi.org/10.5281/zenodo.10122045) 
+ [![Data DOI](https://img.shields.io/badge/Data_DOI-10.5281%2Fzenodo.10122045-blue)](https://doi.org/10.5281/zenodo.10122045) 
 
 The full reference is
 ```
